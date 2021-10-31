@@ -1,0 +1,37 @@
+[
+  {
+    "id": "0",
+    "avatar": "./assets/Camilr.png",
+    "username": "Camilr"
+  },
+
+  {
+    "id": "1",
+    "avatar": "./assets/Camilr.png",
+    "username": "Second"
+  },
+  
+  {
+    "id": "2",
+    "avatar": "./assets/Camilr.png",
+    "username": "Third"
+  },
+  
+  {
+    "id": "3",
+    "avatar": "./assets/Camilr.png",
+    "username": "Forth"
+  },
+  
+  {
+    "id": "4",
+    "avatar": "./assets/Camilr.png",
+    "username": "5"
+  },
+  
+  {
+    "id": "5",
+    "avatar": "./assets/Camilr.png",
+    "username": "6"
+  }
+]
