@@ -2,11 +2,17 @@
 <div class="topbox">
   <topbox>
     <template #headline>
-      <div class="sitename">
+      <div class="logo">
         <h1>Gitogram /</h1>
       </div>
       <div class="icon">
         <icon name="home" />
+      </div>
+      <div class="photo">
+       <img src="../../assets/Photo.png" alt="">
+      </div>
+      <div class="icon">
+        <icon name="signout" />
       </div>
     </template>
     <template #content>
@@ -23,8 +29,19 @@
   </topbox>
 </div>
 <div class="c-feed">
-    <toggler />
-  </div>
+    <div class="issue">
+      <issues />
+    </div>
+    <toggler @onToggle="toggle" />
+    <div class="comments" v-if="shown">
+      <ul class="comments-list">
+        <li class="comments-item" v-for="n in 5" :key="n">
+          <comment text = "Something" username = "Camil"  />
+        </li>
+      </ul>
+    </div>
+</div>
+
 </template>
 
 <script>
@@ -33,6 +50,8 @@ import { topbox } from '../../components/topbox'
 import { icon } from '../../icons'
 import stories from './data.json'
 import { toggler } from '../../components/toggler'
+import comment from '../../components/comment/comment.vue'
+import issues from '../../components/body/issue.vue'
 
 export default {
   name: 'feeds',
@@ -40,11 +59,19 @@ export default {
     topbox,
     icon,
     StoryUserItem,
-    toggler
+    toggler,
+    comment,
+    issues
   },
   data () {
     return {
-      stories
+      stories,
+      shown: false
+    }
+  },
+  methods: {
+    toggle (isOpened) {
+      this.shown = isOpened
     }
   }
 }
@@ -53,12 +80,7 @@ export default {
 <style lang="scss" scoped>
   .icon {
     color: green;
-    width: 20px;
-    margin-left: 90%;
-  }
-
-  .sitename {
-    display: flex;
+    width: 32px;
   }
 </style>
 

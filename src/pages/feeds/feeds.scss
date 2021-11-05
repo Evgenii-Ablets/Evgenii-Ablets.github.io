@@ -3,7 +3,21 @@
   justify-content: space-between;
 }
 
-.c-feed {
-  display: flex;
-  justify-content: space-between;
+.logo {
+  margin-right: auto;
+}
+
+.photo {
+  height: 37;
+  width: 37;
+  border-radius: 50%;
+  padding-inline: 20px;
+}
+.issue {
+  background: #FFFFFF;
+  border: 1px solid #F1F1F1;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  width: 979px;
+  min-height: 173px;
 }
