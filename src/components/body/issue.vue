@@ -1,12 +1,11 @@
 <template>
   <avatar nickname='joshua_l'></avatar>
    <post />
-   <issueslist />
 </template>
 
 <script>
-import post from './post.vue'
-import avatar from './avatar.vue'
+import post from '../post/post.vue'
+import avatar from '../avatar/avatar.vue'
 export default {
   name: 'Issues',
   data () {
@@ -20,6 +19,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang='scss' scoped>
 </style>

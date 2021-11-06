@@ -8,17 +8,17 @@
       <div class="post__footer">
         <div class="icon">
           <icon name="star" />
-          <span>Star</span>
+          <span class="teg">Star</span>
         </div>
         <div class="rating">
-          13354
+          133
         </div>
         <div class="icon">
           <icon name="fork" />
-          <span>Fork</span>
+          <span class="teg">Fork</span>
         </div>
         <div class="followers">
-          4333545
+          433
         </div>
 
       </div>
@@ -37,32 +37,6 @@ export default {
 }
 </script>
 
-<style scoped>
-* {
-  box-sizing: border-box;
-}
+<style lang='scss' scoped src='./post.scss'>
 
-.post__container {
-  padding: 20px;
-}
-h1 {
-  margin: 0;
-}
-.post__description, .post__tile {
-  text-align: left;
-}
-.post__footer {
-  display: flex;
-  border: 1px solid #1B1F2326;
-  border-radius: 4px;
-  margin-top: 32px;
-}
-.rating, .followers {
-  border: 1px solid #1B1F2326;
-}
-.icon {
-  display: flex;
-  margin-inline: 5px;
-  border: 1px solid #1B1F2326;
-}
 </style>

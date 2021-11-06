@@ -29,6 +29,7 @@
   </topbox>
 </div>
 <div class="c-feed">
+  <c-feed>
     <div class="issue">
       <issues />
     </div>
@@ -40,6 +41,7 @@
         </li>
       </ul>
     </div>
+  </c-feed>
 </div>
 
 </template>
@@ -79,7 +81,7 @@ export default {
 
 <style lang="scss" scoped>
   .icon {
-    color: green;
+    color: black;
     width: 32px;
   }
 </style>
