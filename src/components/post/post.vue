@@ -11,16 +11,15 @@
           <span class="teg">Star</span>
         </div>
         <div class="rating">
-          133
+          <rating text='1444' />
         </div>
         <div class="icon">
           <icon name="fork" />
           <span class="teg">Fork</span>
         </div>
         <div class="followers">
-          433
+          <followers text='13'/>
         </div>
-
       </div>
     </div>
   </div>
@@ -29,10 +28,18 @@
 
 <script>
 import { icon } from '../../icons'
+import rating from '../rating/rating.vue'
+import followers from '../followwers/followers.vue'
 export default {
   name: 'Post',
+  data () {
+    return {
+    }
+  },
   components: {
-    icon
+    icon,
+    rating,
+    followers
   }
 }
 </script>
