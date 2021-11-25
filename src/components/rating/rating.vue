@@ -1,15 +1,18 @@
 <template>
   <div class="c-rating">
-    <p>{{ text }}</p>
+    <p>{{ stars }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'rating',
+  setup () {
+    return {}
+  },
   props: {
-    text: {
-      type: String,
+    stars: {
+      type: Number,
       required: true
     }
   }

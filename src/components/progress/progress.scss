@@ -1,0 +1,22 @@
+.c-progress {
+  background: rgba(166, 219, 180, 0.3);
+  height: 5px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+ &.active {
+    .indicator {
+      width: 100%;
+    }
+   }
+  }
+.indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background: green;
+  transition: 5s;
+}

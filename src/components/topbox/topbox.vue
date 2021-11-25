@@ -10,5 +10,13 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  setup () {
+    return {}
+  }
+}
+</script>
+
 <style lang="scss" src="./topbox.scss" scoped>
 </style>

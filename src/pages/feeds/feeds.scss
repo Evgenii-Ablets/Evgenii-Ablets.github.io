@@ -8,12 +8,16 @@
 }
 
 .photo {
-  height: 37;
-  width: 37;
+  height: 32px;
   border-radius: 50%;
   padding-inline: 20px;
 }
 .issue {
   width: 979px;
   min-height: 173px;
+}
+.icon {
+  color: black;
+  width: 32px;
+  height: 32px;
 }

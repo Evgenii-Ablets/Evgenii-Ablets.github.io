@@ -1,3 +1,15 @@
-.avatar:hover {
+.img {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.avatar {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.c-story-user-item:hover {
   transform: scale(1.3);
 }

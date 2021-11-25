@@ -1,7 +1,7 @@
 <template>
   <button :class="['button', {'active':isOpened}]" @click="toggle">
     <span class="text">{{ isOpened ? "Hide" : "Show" }}issues</span>
-    <span class="icon">
+    <span class="icon" id="shape">
       <icon name="shape" />
     </span>
   </button>

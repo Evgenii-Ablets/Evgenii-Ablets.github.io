@@ -9,7 +9,7 @@
         <icon name="home" />
       </div>
       <div class="photo">
-       <img src="../../assets/Photo.png" alt="">
+       <avatar avatar='https://cdn-icons-png.flaticon.com/512/3048/3048122.png' class='icon' />
       </div>
       <div class="icon">
         <icon name="signout" />
@@ -31,13 +31,22 @@
 <div class="c-feed">
   <c-feed>
     <div class="issue">
-      <issues />
-    </div>
-    <toggler @onToggle="toggle" />
+      <ul class='list'>
+        <li class='item' v-for="item in items" :key="item.id">
+          <avatar :avatar='item.owner.avatar_url' :nickname='item.owner.login' class='icon' />
+           <issues
+           :nickname='item.owner.login'
+           :stars='item.owner.stargazers_count'
+           :avatar='item.owner.avatar_url'
+            />
+            <toggler @onToggle="toggle" />
     <div class="comments" v-if="shown">
       <ul class="comments-list">
         <li class="comments-item" v-for="n in 5" :key="n">
-          <comment text = "Something" username = "Camil"  />
+          <comment text = "Something" username = "Camil" />
+        </li>
+      </ul>
+    </div>
         </li>
       </ul>
     </div>
@@ -54,6 +63,8 @@ import stories from './data.json'
 import { toggler } from '../../components/toggler'
 import comment from '../../components/comment/comment.vue'
 import issues from '../../components/body/issue.vue'
+import avatar from '../../components/avatar/avatar.vue'
+import * as api from '../../api'
 
 export default {
   name: 'feeds',
@@ -63,27 +74,37 @@ export default {
     StoryUserItem,
     toggler,
     comment,
-    issues
+    issues,
+    avatar
   },
   data () {
     return {
       stories,
-      shown: false
+      shown: false,
+      items: []
     }
+  },
+  props: {
+    stars: Number
   },
   methods: {
     toggle (isOpened) {
       this.shown = isOpened
+    }
+  },
+  async created () {
+    try {
+      const { data } = await api.trandings.getTrendings()
+      this.items = data.items
+    } catch (error) {
+      console.log(error)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .icon {
-    color: black;
-    width: 32px;
-  }
+
 </style>
 
 <style lang="scss" src='./feeds.scss' scoped>

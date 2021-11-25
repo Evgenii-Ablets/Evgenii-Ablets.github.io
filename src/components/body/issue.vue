@@ -1,5 +1,5 @@
 <template>
-  <avatar nickname='joshua_l'></avatar>
+  <avatar></avatar>
    <post />
 </template>
 
@@ -8,13 +8,26 @@ import post from '../post/post.vue'
 import avatar from '../avatar/avatar.vue'
 export default {
   name: 'Issues',
-  data () {
-    return {
-    }
+  setup () {
+    return {}
   },
   components: {
     post,
     avatar
+  },
+  props: {
+    nickname: {
+      type: String,
+      required: true
+    },
+    avatar: {
+      type: String,
+      require: true
+    },
+    stars: {
+      type: Number,
+      required: true
+    }
   }
 }
 </script>

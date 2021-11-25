@@ -6,40 +6,18 @@
         JavaScript framework for building interactive web applications ⚡
       </p>
       <div class="post__footer">
-        <div class="icon">
-          <icon name="star" />
-          <span class="teg">Star</span>
-        </div>
-        <div class="rating">
-          <rating text='1444' />
-        </div>
-        <div class="icon">
-          <icon name="fork" />
-          <span class="teg">Fork</span>
-        </div>
-        <div class="followers">
-          <followers text='13'/>
-        </div>
+        <postfooter />
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
-import { icon } from '../../icons'
-import rating from '../rating/rating.vue'
-import followers from '../followwers/followers.vue'
+import postfooter from '../postfooter/postfooter.vue'
 export default {
   name: 'Post',
-  data () {
-    return {
-    }
-  },
   components: {
-    icon,
-    rating,
-    followers
+    postfooter
   }
 }
 </script>
