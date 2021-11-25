@@ -1,6 +1,6 @@
 <template>
-  <avatar></avatar>
-   <post />
+  <avatar :avatar="avatar" :nickname="nickname" ></avatar>
+   <post :stars="stars" :forks='forks' :title="title" :description="description" />
 </template>
 
 <script>
@@ -8,7 +8,7 @@ import post from '../post/post.vue'
 import avatar from '../avatar/avatar.vue'
 export default {
   name: 'Issues',
-  setup () {
+  data () {
     return {}
   },
   components: {
@@ -25,6 +25,18 @@ export default {
       require: true
     },
     stars: {
+      type: Number,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    forks: {
       type: Number,
       required: true
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="followers">
-    <p>{{ text }}</p>
+    <p>{{ forks }}</p>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'rating',
   props: {
-    text: {
+    forks: {
       type: String,
       required: true
     }

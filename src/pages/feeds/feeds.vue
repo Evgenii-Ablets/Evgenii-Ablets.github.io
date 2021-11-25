@@ -17,11 +17,11 @@
     </template>
     <template #content>
       <ul class="stories">
-        <li class="stories-item" v-for="story in stories" :key="story.id">
+        <li class="stories-item" v-for="item in items" :key="item.id">
           <story-user-item
-          :avatar="story.avatar"
-          :username="story.username"
-          @onPress="handlePress(story.id)"
+          :avatar='item.owner.avatar_url'
+          :username='item.owner.login'
+          @onPress="handlePress(item.id)"
           />
         </li>
       </ul>
@@ -33,11 +33,13 @@
     <div class="issue">
       <ul class='list'>
         <li class='item' v-for="item in items" :key="item.id">
-          <avatar :avatar='item.owner.avatar_url' :nickname='item.owner.login' class='icon' />
            <issues
            :nickname='item.owner.login'
-           :stars='item.owner.stargazers_count'
+           :stars='item.stargazers_count'
            :avatar='item.owner.avatar_url'
+           :forks='item.forks_count'
+           :title="item.name"
+           :description="item.description"
             />
             <toggler @onToggle="toggle" />
     <div class="comments" v-if="shown">

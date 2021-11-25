@@ -5,14 +5,14 @@
           <span class="teg">Star</span>
         </div>
         <div class="rating">
-          <rating />
+          <rating :stars="stars" />
         </div>
         <div class="icon_1">
           <icon name="fork" />
           <span class="teg">Fork</span>
         </div>
         <div class="followers">
-          <followers text='13'/>
+          <followers :forks='forks' />
         </div>
   </div>
 </template>
@@ -27,6 +27,16 @@ export default {
     icon,
     rating,
     followers
+  },
+  props: {
+    stars: {
+      type: Number,
+      required: true
+    },
+    forks: {
+      type: Number,
+      required: true
+    }
   }
 }
 </script>
